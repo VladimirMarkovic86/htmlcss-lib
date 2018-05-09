@@ -4,7 +4,7 @@ Simple HTML and CSS library
 
 ## Installation
 
-Download from http://gitlab:1610/.
+Download from http://gitlab:1610/VladimirMarkovic86/htmlcss-lib.
 
 ## Usage
 
