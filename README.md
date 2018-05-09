@@ -1,10 +1,10 @@
 # server
 
-FIXME: description
+Simple HTML and CSS library
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Download from http://gitlab:1610/.
 
 ## Usage
 
