@@ -494,58 +494,58 @@
 ; )
 
 (defn- generate-html
-  "Generates HTML element out of clojure map created by crt fn"
-  [data]
-  (if (map? data)
-    (let [el (:el data)
-          cont (:cont data)
-          new-element (.createElement js/document el)
-          attrs (:attrs data)
-          events (:events data)]
-     (doseq [[attr-name
-              attr-value] attrs]
-      (let [attr-cont (atom "")]
-       (if (and (= attr-name
-                   :style)
-                (map? attr-value))
-        (doseq [[prop-name
-                 prop-value] attr-value]
-         (swap! attr-cont str (name prop-name)
-                              ": "
-                              prop-value
-                              "; "))
-        (swap! attr-cont str attr-value))
-       (.setAttribute new-element (name attr-name)
-                                  @attr-cont))
-      )
-     (doseq [[evt-name
-              {evt-fn :evt-fn
-               evt-p :evt-p}] events]
-      (aset new-element (name evt-name)
-                        #(evt-fn evt-p
-                                 new-element)
-       ))
-     (if (or (string? cont)
-             (number? cont))
-      (aset new-element "innerHTML" cont)
-      (if (vector? cont)
-       (do 
-        (doseq [cont-element cont]
-         (.appendChild new-element (generate-html cont-element))
-         ))
-       (if (map? cont)
-        (.appendChild new-element (generate-html cont))
-        ""))
-      )
-     new-element)
-   (if (vector? data)
-    (let [generated-htmls (atom [])]
-     (doseq [data-element data]
-      (swap! generated-htmls conj (generate-html data-element))
-      )
-     @generated-htmls)
-    nil))
-  )
+ "Generates HTML element out of clojure map created by crt fn"
+ [data]
+ (if (map? data)
+   (let [el (:el data)
+         cont (:cont data)
+         new-element (.createElement js/document el)
+         attrs (:attrs data)
+         events (:events data)]
+    (doseq [[attr-name
+             attr-value] attrs]
+     (let [attr-cont (atom "")]
+      (if (and (= attr-name
+                  :style)
+               (map? attr-value))
+       (doseq [[prop-name
+                prop-value] attr-value]
+        (swap! attr-cont str (name prop-name)
+                             ": "
+                             prop-value
+                             "; "))
+       (swap! attr-cont str attr-value))
+      (.setAttribute new-element (name attr-name)
+                                 @attr-cont))
+     )
+    (doseq [[evt-name
+             {evt-fn :evt-fn
+              evt-p :evt-p}] events]
+     (aset new-element (name evt-name)
+                       #(evt-fn evt-p
+                                new-element)
+      ))
+    (if (or (string? cont)
+            (number? cont))
+     (aset new-element "innerHTML" cont)
+     (if (vector? cont)
+      (do 
+       (doseq [cont-element cont]
+        (.appendChild new-element (generate-html cont-element))
+        ))
+      (if (map? cont)
+       (.appendChild new-element (generate-html cont))
+       ""))
+     )
+    new-element)
+  (if (vector? data)
+   (let [generated-htmls (atom [])]
+    (doseq [data-element data]
+     (swap! generated-htmls conj (generate-html data-element))
+     )
+    @generated-htmls)
+   nil))
+ )
 
 (defn anmtn
   "Generate map that represents animation in css style
