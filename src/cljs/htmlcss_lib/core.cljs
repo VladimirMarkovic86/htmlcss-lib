@@ -22,454 +22,454 @@
    :cont cont})
 
 (defn html
- ""
- [& [cont
-     attrs
-     events]]
- (crt "html"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "html"
+       cont
+       attrs
+       events))
 
 (defn head
- ""
- [& [cont
-     attrs
-     events]]
- (crt "head"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "head"
+       cont
+       attrs
+       events))
 
 (defn title
- ""
- [& [cont
-     attrs
-     events]]
- (crt "title"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "title"
+       cont
+       attrs
+       events))
 
 (defn body
- ""
- [& [cont
-     attrs
-     events]]
- (crt "body"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "body"
+       cont
+       attrs
+       events))
 
 (defn p
- ""
- [& [cont
-     attrs
-     events]]
- (crt "p"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "p"
+       cont
+       attrs
+       events))
 
 (defn h1
- ""
- [& [cont
-     attrs
-     events]]
- (crt "h1"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "h1"
+       cont
+       attrs
+       events))
 
 (defn h2
- ""
- [& [cont
-     attrs
-     events]]
- (crt "h2"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "h2"
+       cont
+       attrs
+       events))
 
 (defn h3
- ""
- [& [cont
-     attrs
-     events]]
- (crt "h3"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "h3"
+       cont
+       attrs
+       events))
 
 (defn h4
- ""
- [& [cont
-     attrs
-     events]]
- (crt "h4"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "h4"
+       cont
+       attrs
+       events))
 
 (defn h5
- ""
- [& [cont
-     attrs
-     events]]
- (crt "h5"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "h5"
+       cont
+       attrs
+       events))
 
 (defn h6
- ""
- [& [cont
-     attrs
-     events]]
- (crt "h6"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "h6"
+       cont
+       attrs
+       events))
 
 (defn pre
- ""
- [& [cont
-     attrs
-     events]]
- (crt "pre"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "pre"
+       cont
+       attrs
+       events))
 
 (defn b
- ""
- [& [cont
-     attrs
-     events]]
- (crt "b"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "b"
+       cont
+       attrs
+       events))
 
 (defn strong
- ""
- [& [cont
-     attrs
-     events]]
- (crt "strong"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "strong"
+       cont
+       attrs
+       events))
 
 (defn i
- ""
- [& [cont
-     attrs
-     events]]
- (crt "i"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "i"
+       cont
+       attrs
+       events))
 
 (defn em
- ""
- [& [cont
-     attrs
-     events]]
- (crt "em"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "em"
+       cont
+       attrs
+       events))
 
 (defn mark
- ""
- [& [cont
-     attrs
-     events]]
- (crt "mark"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "mark"
+       cont
+       attrs
+       events))
 
 (defn small
- ""
- [& [cont
-     attrs
-     events]]
- (crt "small"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "small"
+       cont
+       attrs
+       events))
 
 (defn del
- ""
- [& [cont
-     attrs
-     events]]
- (crt "del"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "del"
+       cont
+       attrs
+       events))
 
 (defn ins
- ""
- [& [cont
-     attrs
-     events]]
- (crt "ins"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "ins"
+       cont
+       attrs
+       events))
 
 (defn sub
- ""
- [& [cont
-     attrs
-     events]]
- (crt "sub"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "sub"
+       cont
+       attrs
+       events))
 
 (defn sup
- ""
- [& [cont
-     attrs
-     events]]
- (crt "sup"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "sup"
+       cont
+       attrs
+       events))
 
 (defn q
- ""
- [& [cont
-     attrs
-     events]]
- (crt "q"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "q"
+       cont
+       attrs
+       events))
 
 (defn blockquote
- ""
- [& [cont
-     attrs
-     events]]
- (crt "blockquote"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "blockquote"
+       cont
+       attrs
+       events))
 
 (defn nav
- ""
- [& [cont
-     attrs
-     events]]
- (crt "nav"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "nav"
+       cont
+       attrs
+       events))
 
 (defn a
- ""
- [& [cont
-     attrs
-     events]]
- (crt "a"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "a"
+       cont
+       attrs
+       events))
 
 (defn img
- ""
- [& [cont
-     attrs
-     events]]
- (crt "img"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "img"
+       cont
+       attrs
+       events))
 
 (defn button
- ""
- [& [cont
-     attrs
-     events]]
- (crt "button"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "button"
+       cont
+       attrs
+       events))
 
 (defn input
- ""
- [& [cont
-     attrs
-     events]]
- (crt "input"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "input"
+       cont
+       attrs
+       events))
 
 (defn textarea
- ""
- [& [cont
-     attrs
-     events]]
- (crt "textarea"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "textarea"
+       cont
+       attrs
+       events))
 
 (defn select
- ""
- [& [cont
-     attrs
-     events]]
- (crt "select"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "select"
+       cont
+       attrs
+       events))
 
 (defn option
- ""
- [& [cont
-     attrs
-     events]]
- (crt "option"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "option"
+       cont
+       attrs
+       events))
 
 (defn ul
- ""
- [& [cont
-     attrs
-     events]]
- (crt "ul"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "ul"
+       cont
+       attrs
+       events))
 
 (defn li
- ""
- [& [cont
-     attrs
-     events]]
- (crt "li"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "li"
+       cont
+       attrs
+       events))
 
 (defn table
- ""
- [& [cont
-     attrs
-     events]]
- (crt "table"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "table"
+       cont
+       attrs
+       events))
 
 (defn thead
- ""
- [& [cont
-     attrs
-     events]]
- (crt "thead"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "thead"
+       cont
+       attrs
+       events))
 
 (defn tbody
- ""
- [& [cont
-     attrs
-     events]]
- (crt "tbody"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "tbody"
+       cont
+       attrs
+       events))
 
 (defn tr
- ""
- [& [cont
-     attrs
-     events]]
- (crt "tr"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "tr"
+       cont
+       attrs
+       events))
 
 (defn th
- ""
- [& [cont
-     attrs
-     events]]
- (crt "th"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "th"
+       cont
+       attrs
+       events))
 
 (defn td
- ""
- [& [cont
-     attrs
-     events]]
- (crt "td"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "td"
+       cont
+       attrs
+       events))
 
 (defn div
- ""
- [& [cont
-     attrs
-     events]]
- (crt "div"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "div"
+       cont
+       attrs
+       events))
 
 (defn label
- ""
- [& [cont
-     attrs
-     events]]
- (crt "label"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "label"
+       cont
+       attrs
+       events))
 
 (defn span
- ""
- [& [cont
-     attrs
-     events]]
- (crt "span"
-      cont
+  ""
+  [& [cont
       attrs
-      events))
+      events]]
+  (crt "span"
+       cont
+       attrs
+       events))
 
 (defn style
- ""
- [& [cont
-     attrs
-     events]]
- (crt "style"
-      cont
-      (assoc attrs :type "text/css")
-      events))
+  ""
+  [& [cont
+      attrs
+      events]]
+  (crt "style"
+       cont
+       (assoc attrs :type "text/css")
+       events))
 
 (defn script
- ""
- [& [cont
-     attrs
-     events]]
- (crt "script"
-      cont
-      (assoc attrs :type "text/javascript")
-      events))
+  ""
+  [& [cont
+      attrs
+      events]]
+  (crt "script"
+       cont
+       (assoc attrs :type "text/javascript")
+       events))
 
 ;(defn css
 ; ""
@@ -494,58 +494,62 @@
 ; )
 
 (defn- generate-html
- "Generates HTML element out of clojure map created by crt fn"
- [data]
- (if (map? data)
-   (let [el (:el data)
-         cont (:cont data)
-         new-element (.createElement js/document el)
-         attrs (:attrs data)
-         events (:events data)]
-    (doseq [[attr-name
-             attr-value] attrs]
-     (let [attr-cont (atom "")]
-      (if (and (= attr-name
-                  :style)
-               (map? attr-value))
-       (doseq [[prop-name
-                prop-value] attr-value]
-        (swap! attr-cont str (name prop-name)
-                             ": "
-                             prop-value
-                             "; "))
-       (swap! attr-cont str attr-value))
-      (.setAttribute new-element (name attr-name)
-                                 @attr-cont))
-     )
-    (doseq [[evt-name
-             {evt-fn :evt-fn
-              evt-p :evt-p}] events]
-     (aset new-element (name evt-name)
-                       #(evt-fn evt-p
-                                new-element)
-      ))
-    (if (or (string? cont)
-            (number? cont))
-     (aset new-element "innerHTML" cont)
-     (if (vector? cont)
-      (do 
-       (doseq [cont-element cont]
-        (.appendChild new-element (generate-html cont-element))
-        ))
-      (if (map? cont)
-       (.appendChild new-element (generate-html cont))
-       ""))
-     )
-    new-element)
-  (if (vector? data)
-   (let [generated-htmls (atom [])]
-    (doseq [data-element data]
-     (swap! generated-htmls conj (generate-html data-element))
-     )
-    @generated-htmls)
-   nil))
- )
+  "Generates HTML element out of clojure map created by crt fn"
+  [data]
+  (if (map? data)
+    (let [el (:el data)
+          cont (:cont data)
+          new-element (.createElement
+                        js/document
+                        el)
+          attrs (:attrs data)
+          events (:events data)]
+     (doseq [[attr-name
+              attr-value] attrs]
+      (let [attr-cont (atom "")]
+        (if (and (= attr-name
+                    :style)
+                 (map? attr-value))
+          (doseq [[prop-name
+                   prop-value] attr-value]
+           (swap! attr-cont str (name prop-name)
+                                ": "
+                                prop-value
+                                "; "))
+          (swap! attr-cont str attr-value))
+        (.setAttribute new-element (name attr-name)
+                                   @attr-cont))
+      )
+     (doseq [[evt-name
+              {evt-fn :evt-fn
+               evt-p :evt-p}] events]
+       (aset new-element (name evt-name)
+                         #(evt-fn evt-p
+                                  new-element))
+      )
+     (if (or (string? cont)
+             (number? cont))
+       (aset new-element "innerHTML" cont)
+       (if (vector? cont)
+         (do 
+           (doseq [cont-element cont]
+            (.appendChild new-element (generate-html cont-element))
+            ))
+         (if (map? cont)
+           (.appendChild
+             new-element
+             (generate-html
+               cont))
+           ""))
+      )
+     new-element)
+    (when (vector? data)
+      (let [generated-htmls (atom [])]
+        (doseq [data-element data]
+          (swap! generated-htmls conj (generate-html data-element))
+         )
+        @generated-htmls))
+   ))
 
 (defn anmtn
   "Generate map that represents animation in css style
@@ -558,8 +562,9 @@
   [animation-name
    from-props
    to-props]
-  {:anim (str "@keyframes "
-              animation-name)
+  {:anim (str
+           "@keyframes "
+           animation-name)
    :from from-props
    :to to-props})
 
@@ -594,63 +599,66 @@
         from-props (:from data)
         to-props (:to data)
         content (atom "")]
-   (when sel
-    (swap! content str sel
-                       " { ")
-    (doseq [[prop-name
-             prop-value] props]
-     (swap! content str (name prop-name)
-                        ": "
-                        prop-value
-                        "; ")))
-   (when anim
-    (swap! content str anim
-                       " { "
-                       "from { ")
-    (doseq [[prop-name
-             prop-value] from-props]
-     (swap! content str (name prop-name)
-                        ": "
-                        prop-value
-                        "; "))
+    (when sel
+      (swap! content str sel
+                         " { ")
+      (doseq [[prop-name
+               prop-value] props]
+        (swap! content str (name prop-name)
+                           ": "
+                           prop-value
+                           "; "))
+     )
+    (when anim
+      (swap! content str anim
+                         " { "
+                         "from { ")
+      (doseq [[prop-name
+               prop-value] from-props]
+        (swap! content str (name prop-name)
+                           ": "
+                           prop-value
+                           "; "))
+      (swap! content str "} ")
+      (swap! content str "to { ")
+      (doseq [[prop-name
+               prop-value] to-props]
+        (swap! content str (name prop-name)
+                           ": "
+                           prop-value
+                           "; "))
+      (swap! content str "} "))
     (swap! content str "} ")
-    (swap! content str "to { ")
-    (doseq [[prop-name
-             prop-value] to-props]
-     (swap! content str (name prop-name)
-                        ": "
-                        prop-value
-                        "; "))
-    (swap! content str "} "))
-   (swap! content str "} ")
-   @content))
+    @content))
 
 (defn- generate-style
   "Generates style HTML element from clojure map generated by stl fn"
   [data]
-  (if (map? data)
-   (let [new-element (.createElement js/document "style")
-         attrs (:attrs data)
-         cont (:cont data)]
-    (if (string? cont)
-     (aset new-element "innerHTML" cont)
-     (if (vector? cont)
-      (doseq [cont-element cont]
-       (aset new-element "innerHTML" (str (aget new-element "innerHTML")
-                                          " "
-                                          (form-style-content cont-element))
-        ))
-      (if (map? cont)
-       (aset new-element "innerHTML" (form-style-content cont))
-       (aset new-element "innerHTML" (form-style-content data))
-       ))
-     )
-    (doseq [[attr-name
-             attr-value] attrs]
-     (.setAttribute new-element (name attr-name)
-                                attr-value))
-    new-element)
-   nil))
+  (when (map? data)
+    (let [new-element (.createElement
+                        js/document
+                        "style")
+          attrs (:attrs data)
+          cont (:cont data)]
+      (if (string? cont)
+        (aset new-element "innerHTML" cont)
+        (if (vector? cont)
+          (doseq [cont-element cont]
+            (aset new-element "innerHTML" (str (aget new-element "innerHTML")
+                                               " "
+                                               (form-style-content cont-element))
+             ))
+          (if (map? cont)
+            (aset new-element "innerHTML" (form-style-content cont))
+            (aset new-element "innerHTML" (form-style-content data))
+           ))
+       )
+      (doseq [[attr-name
+               attr-value] attrs]
+        (.setAttribute new-element (name attr-name)
+                                   attr-value))
+      new-element))
+ )
 
 (defn gen
   "Generate HTML element from map generated by crt or stl fns"
@@ -658,7 +666,9 @@
   & [tag-type]]
   (if (= tag-type
          "style")
-   (generate-style data)
-   (generate-html data))
-  )
+    (generate-style
+      data)
+    (generate-html
+      data))
+ )
 
