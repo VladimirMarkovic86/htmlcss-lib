@@ -533,20 +533,30 @@
        (if (vector? cont)
          (do 
            (doseq [cont-element cont]
-            (.appendChild new-element (generate-html cont-element))
+             (when-let [generated-elem (generate-html
+                                         cont-element)]
+               (.appendChild
+                 new-element
+                 generated-elem))
             ))
          (if (map? cont)
-           (.appendChild
-             new-element
-             (generate-html
-               cont))
+           (when-let [generated-elem (generate-html
+                                       cont)]
+             (.appendChild
+               new-element
+               generated-elem))
            ""))
       )
      new-element)
     (when (vector? data)
       (let [generated-htmls (atom [])]
         (doseq [data-element data]
-          (swap! generated-htmls conj (generate-html data-element))
+          (when-let [generated-elem (generate-html
+                                      data-element)]
+            (swap!
+              generated-htmls
+              conj
+              generated-elem))
          )
         @generated-htmls))
    ))
