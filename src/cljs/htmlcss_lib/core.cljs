@@ -15,461 +15,613 @@
   [el
    & [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   {:el el
    :events events
    :attrs attrs
+   :dynamic-attrs dynamic-attrs
    :cont cont})
 
 (defn html
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "html"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn head
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "head"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn title
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "title"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn body
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "body"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn p
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "p"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn h1
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "h1"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn h2
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "h2"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn h3
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "h3"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn h4
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "h4"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn h5
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "h5"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn h6
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "h6"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn pre
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "pre"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn b
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "b"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn strong
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "strong"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn i
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "i"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn em
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "em"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn mark
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "mark"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn small
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "small"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn del
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "del"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn ins
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "ins"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn sub
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "sub"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn sup
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "sup"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn q
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "q"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn blockquote
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "blockquote"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn nav
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "nav"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn a
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "a"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn img
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "img"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
+
+(defn video
+  ""
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "video"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn source
+  ""
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "source"
+       cont
+       attrs
+       events
+       dynamic-attrs))
 
 (defn button
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "button"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn input
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "input"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn textarea
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "textarea"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn select
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "select"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn option
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "option"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
+
+(defn ol
+  ""
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "ol"
+       cont
+       attrs
+       events
+       dynamic-attrs))
 
 (defn ul
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "ul"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn li
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "li"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn table
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "table"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn thead
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "thead"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn tbody
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "tbody"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn tr
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "tr"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn th
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "th"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn td
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "td"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn div
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "div"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn label
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "label"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
 
 (defn span
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "span"
        cont
        attrs
-       events))
+       events
+       dynamic-attrs))
+
+(defn menu
+  ""
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "menu"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn menuitem
+  ""
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "menuitem"
+       cont
+       attrs
+       events
+       dynamic-attrs))
 
 (defn style
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "style"
        cont
        (assoc attrs :type "text/css")
-       events))
+       events
+       dynamic-attrs))
 
 (defn script
   ""
   [& [cont
       attrs
-      events]]
+      events
+      dynamic-attrs]]
   (crt "script"
        cont
        (assoc attrs :type "text/javascript")
-       events))
+       events
+       dynamic-attrs))
 
 ;(defn css
 ; ""
@@ -493,61 +645,121 @@
 ; 
 ; )
 
+(defn html?
+  ""
+  [data]
+  (when data
+    (when-let [data-type-name (aget
+                                (type data)
+                                "name")]
+      (> (.indexOf
+           data-type-name
+           "HTML")
+         -1))
+   ))
+
 (defn- generate-html
   "Generates HTML element out of clojure map created by crt fn"
   [data]
-  (if (map? data)
-    (let [el (:el data)
-          cont (:cont data)
-          new-element (.createElement
-                        js/document
-                        el)
-          attrs (:attrs data)
-          events (:events data)]
-     (doseq [[attr-name
-              attr-value] attrs]
-      (let [attr-cont (atom "")]
-        (if (and (= attr-name
-                    :style)
-                 (map? attr-value))
-          (doseq [[prop-name
-                   prop-value] attr-value]
-           (swap! attr-cont str (name prop-name)
-                                ": "
-                                prop-value
-                                "; "))
-          (swap! attr-cont str attr-value))
-        (.setAttribute new-element (name attr-name)
-                                   @attr-cont))
-      )
-     (doseq [[evt-name
-              {evt-fn :evt-fn
-               evt-p :evt-p}] events]
-       (aset new-element (name evt-name)
-                         #(evt-fn evt-p
-                                  new-element))
-      )
-     (if (or (string? cont)
-             (number? cont))
-       (aset new-element "innerHTML" cont)
-       (if (vector? cont)
-         (do 
-           (doseq [cont-element cont]
-             (when-let [generated-elem (generate-html
-                                         cont-element)]
-               (.appendChild
+  (let [result (atom nil)]
+    (when (map? data)
+      (let [el (:el data)
+            cont (:cont data)
+            new-element (.createElement
+                          js/document
+                          el)
+            attrs (:attrs data)
+            events (:events data)
+            dynamic-attrs (:dynamic-attrs data)]
+       (doseq [[attr-name
+                attr-value] attrs]
+        (let [attr-cont (atom "")]
+          (if (and (= attr-name
+                      :style)
+                   (map? attr-value))
+            (doseq [[prop-name
+                     prop-value] attr-value]
+             (swap! attr-cont str (name prop-name)
+                                  ": "
+                                  prop-value
+                                  "; "))
+            (swap! attr-cont str attr-value))
+          (.setAttribute new-element (name attr-name)
+                                     @attr-cont))
+        )       
+       (doseq [[evt-name
+                evt-conf] events]
+         (when (map? evt-conf)
+           (let [{evt-fn :evt-fn
+                  evt-p :evt-p} evt-conf]
+             (aset
+               new-element
+               (name evt-name)
+               ((fn []
+                  (fn [event]
+                    (evt-fn
+                      evt-p
+                      new-element
+                      event))
+                 ))
+              ))
+          )
+         (when (vector? evt-conf)
+           (doseq [{evt-fn :evt-fn
+                    evt-p :evt-p} evt-conf]
+             (let [attached-evts (aget
+                                   new-element
+                                   (name evt-name))
+                   
+                   ]
+               (.addEventListener
                  new-element
-                 generated-elem))
+                 (.replace
+                   (name evt-name)
+                   "on"
+                   "")
+                 ((fn []
+                    (fn [event]
+                      (evt-fn
+                        evt-p
+                        new-element
+                        event))
+                   ))
+                ))
             ))
-         (if (map? cont)
+        )
+       (doseq [[dyn-attr-name
+                dyn-attr-value] dynamic-attrs]
+         (aset
+           new-element
+           (name dyn-attr-name)
+           dyn-attr-value))
+       (when (or (string? cont)
+                 (number? cont))
+         (aset new-element "innerHTML" cont))
+       (when (vector? cont)
+         (doseq [cont-element cont]
            (when-let [generated-elem (generate-html
-                                       cont)]
+                                       cont-element)]
              (.appendChild
                new-element
                generated-elem))
-           ""))
-      )
-     new-element)
+          ))
+       (when (map? cont)
+         (when-let [generated-elem (generate-html
+                                     cont)]
+           (.appendChild
+             new-element
+             generated-elem))
+        )
+       (when (html? cont)
+         (.appendChild
+           new-element
+           cont))
+       (reset!
+         result
+         new-element))
+     )
     (when (vector? data)
       (let [generated-htmls (atom [])]
         (doseq [data-element data]
@@ -558,8 +770,15 @@
               conj
               generated-elem))
          )
-        @generated-htmls))
-   ))
+        (reset!
+          result
+          @generated-htmls))
+     )
+    (when (html? data)
+      (reset!
+        result
+        data))
+    @result))
 
 (defn anmtn
   "Generate map that represents animation in css style
