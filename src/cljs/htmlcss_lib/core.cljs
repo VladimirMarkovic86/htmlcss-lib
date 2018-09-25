@@ -24,7 +24,7 @@
    :cont cont})
 
 (defn html
-  ""
+  "Shortcut for clojure map representation of html tag"
   [& [cont
       attrs
       events
@@ -36,7 +36,7 @@
        dynamic-attrs))
 
 (defn head
-  ""
+  "Shortcut for clojure map representation of head tag"
   [& [cont
       attrs
       events
@@ -48,7 +48,7 @@
        dynamic-attrs))
 
 (defn title
-  ""
+  "Shortcut for clojure map representation of title tag"
   [& [cont
       attrs
       events
@@ -60,7 +60,7 @@
        dynamic-attrs))
 
 (defn body
-  ""
+  "Shortcut for clojure map representation of body tag"
   [& [cont
       attrs
       events
@@ -72,7 +72,7 @@
        dynamic-attrs))
 
 (defn p
-  ""
+  "Shortcut for clojure map representation of p tag"
   [& [cont
       attrs
       events
@@ -84,7 +84,7 @@
        dynamic-attrs))
 
 (defn h1
-  ""
+  "Shortcut for clojure map representation of h1 tag"
   [& [cont
       attrs
       events
@@ -96,7 +96,7 @@
        dynamic-attrs))
 
 (defn h2
-  ""
+  "Shortcut for clojure map representation of h2 tag"
   [& [cont
       attrs
       events
@@ -108,7 +108,7 @@
        dynamic-attrs))
 
 (defn h3
-  ""
+  "Shortcut for clojure map representation of h3 tag"
   [& [cont
       attrs
       events
@@ -120,7 +120,7 @@
        dynamic-attrs))
 
 (defn h4
-  ""
+  "Shortcut for clojure map representation of h4 tag"
   [& [cont
       attrs
       events
@@ -132,7 +132,7 @@
        dynamic-attrs))
 
 (defn h5
-  ""
+  "Shortcut for clojure map representation of h5 tag"
   [& [cont
       attrs
       events
@@ -144,7 +144,7 @@
        dynamic-attrs))
 
 (defn h6
-  ""
+  "Shortcut for clojure map representation of h6 tag"
   [& [cont
       attrs
       events
@@ -156,7 +156,7 @@
        dynamic-attrs))
 
 (defn pre
-  ""
+  "Shortcut for clojure map representation of pre tag"
   [& [cont
       attrs
       events
@@ -168,7 +168,7 @@
        dynamic-attrs))
 
 (defn b
-  ""
+  "Shortcut for clojure map representation of b tag"
   [& [cont
       attrs
       events
@@ -180,7 +180,7 @@
        dynamic-attrs))
 
 (defn strong
-  ""
+  "Shortcut for clojure map representation of strong tag"
   [& [cont
       attrs
       events
@@ -192,7 +192,7 @@
        dynamic-attrs))
 
 (defn i
-  ""
+  "Shortcut for clojure map representation of i tag"
   [& [cont
       attrs
       events
@@ -204,7 +204,7 @@
        dynamic-attrs))
 
 (defn em
-  ""
+  "Shortcut for clojure map representation of em tag"
   [& [cont
       attrs
       events
@@ -216,7 +216,7 @@
        dynamic-attrs))
 
 (defn mark
-  ""
+  "Shortcut for clojure map representation of mark tag"
   [& [cont
       attrs
       events
@@ -228,7 +228,7 @@
        dynamic-attrs))
 
 (defn small
-  ""
+  "Shortcut for clojure map representation of small tag"
   [& [cont
       attrs
       events
@@ -240,7 +240,7 @@
        dynamic-attrs))
 
 (defn del
-  ""
+  "Shortcut for clojure map representation of del tag"
   [& [cont
       attrs
       events
@@ -252,7 +252,7 @@
        dynamic-attrs))
 
 (defn ins
-  ""
+  "Shortcut for clojure map representation of ins tag"
   [& [cont
       attrs
       events
@@ -264,7 +264,7 @@
        dynamic-attrs))
 
 (defn sub
-  ""
+  "Shortcut for clojure map representation of sub tag"
   [& [cont
       attrs
       events
@@ -276,7 +276,7 @@
        dynamic-attrs))
 
 (defn sup
-  ""
+  "Shortcut for clojure map representation of sup tag"
   [& [cont
       attrs
       events
@@ -288,7 +288,7 @@
        dynamic-attrs))
 
 (defn q
-  ""
+  "Shortcut for clojure map representation of q tag"
   [& [cont
       attrs
       events
@@ -300,7 +300,7 @@
        dynamic-attrs))
 
 (defn blockquote
-  ""
+  "Shortcut for clojure map representation of blockquote tag"
   [& [cont
       attrs
       events
@@ -312,7 +312,7 @@
        dynamic-attrs))
 
 (defn nav
-  ""
+  "Shortcut for clojure map representation of nav tag"
   [& [cont
       attrs
       events
@@ -324,7 +324,7 @@
        dynamic-attrs))
 
 (defn a
-  ""
+  "Shortcut for clojure map representation of a tag"
   [& [cont
       attrs
       events
@@ -336,7 +336,7 @@
        dynamic-attrs))
 
 (defn img
-  ""
+  "Shortcut for clojure map representation of img tag"
   [& [cont
       attrs
       events
@@ -348,7 +348,7 @@
        dynamic-attrs))
 
 (defn video
-  ""
+  "Shortcut for clojure map representation of video tag"
   [& [cont
       attrs
       events
@@ -360,7 +360,7 @@
        dynamic-attrs))
 
 (defn source
-  ""
+  "Shortcut for clojure map representation of source tag"
   [& [cont
       attrs
       events
@@ -372,7 +372,7 @@
        dynamic-attrs))
 
 (defn button
-  ""
+  "Shortcut for clojure map representation of button tag"
   [& [cont
       attrs
       events
@@ -384,7 +384,7 @@
        dynamic-attrs))
 
 (defn input
-  ""
+  "Shortcut for clojure map representation of input tag"
   [& [cont
       attrs
       events
@@ -396,7 +396,7 @@
        dynamic-attrs))
 
 (defn textarea
-  ""
+  "Shortcut for clojure map representation of textarea tag"
   [& [cont
       attrs
       events
@@ -408,7 +408,7 @@
        dynamic-attrs))
 
 (defn select
-  ""
+  "Shortcut for clojure map representation of select tag"
   [& [cont
       attrs
       events
@@ -420,7 +420,7 @@
        dynamic-attrs))
 
 (defn option
-  ""
+  "Shortcut for clojure map representation of option tag"
   [& [cont
       attrs
       events
@@ -432,7 +432,7 @@
        dynamic-attrs))
 
 (defn ol
-  ""
+  "Shortcut for clojure map representation of ol tag"
   [& [cont
       attrs
       events
@@ -444,7 +444,7 @@
        dynamic-attrs))
 
 (defn ul
-  ""
+  "Shortcut for clojure map representation of ul tag"
   [& [cont
       attrs
       events
@@ -456,7 +456,7 @@
        dynamic-attrs))
 
 (defn li
-  ""
+  "Shortcut for clojure map representation of li tag"
   [& [cont
       attrs
       events
@@ -468,7 +468,7 @@
        dynamic-attrs))
 
 (defn table
-  ""
+  "Shortcut for clojure map representation of table tag"
   [& [cont
       attrs
       events
@@ -480,7 +480,7 @@
        dynamic-attrs))
 
 (defn thead
-  ""
+  "Shortcut for clojure map representation of thead tag"
   [& [cont
       attrs
       events
@@ -492,7 +492,7 @@
        dynamic-attrs))
 
 (defn tbody
-  ""
+  "Shortcut for clojure map representation of tbody tag"
   [& [cont
       attrs
       events
@@ -504,7 +504,7 @@
        dynamic-attrs))
 
 (defn tr
-  ""
+  "Shortcut for clojure map representation of tr tag"
   [& [cont
       attrs
       events
@@ -516,7 +516,7 @@
        dynamic-attrs))
 
 (defn th
-  ""
+  "Shortcut for clojure map representation of th tag"
   [& [cont
       attrs
       events
@@ -528,7 +528,7 @@
        dynamic-attrs))
 
 (defn td
-  ""
+  "Shortcut for clojure map representation of td tag"
   [& [cont
       attrs
       events
@@ -540,7 +540,7 @@
        dynamic-attrs))
 
 (defn div
-  ""
+  "Shortcut for clojure map representation of div tag"
   [& [cont
       attrs
       events
@@ -552,7 +552,7 @@
        dynamic-attrs))
 
 (defn label
-  ""
+  "Shortcut for clojure map representation of label tag"
   [& [cont
       attrs
       events
@@ -564,7 +564,7 @@
        dynamic-attrs))
 
 (defn span
-  ""
+  "Shortcut for clojure map representation of span tag"
   [& [cont
       attrs
       events
@@ -576,7 +576,7 @@
        dynamic-attrs))
 
 (defn menu
-  ""
+  "Shortcut for clojure map representation of menu tag"
   [& [cont
       attrs
       events
@@ -588,7 +588,7 @@
        dynamic-attrs))
 
 (defn menuitem
-  ""
+  "Shortcut for clojure map representation of menuitem tag"
   [& [cont
       attrs
       events
@@ -600,7 +600,7 @@
        dynamic-attrs))
 
 (defn style
-  ""
+  "Shortcut for clojure map representation of style tag"
   [& [cont
       attrs
       events
@@ -612,7 +612,7 @@
        dynamic-attrs))
 
 (defn script
-  ""
+  "Shortcut for clojure map representation of script tag"
   [& [cont
       attrs
       events
@@ -646,7 +646,7 @@
 ; )
 
 (defn html?
-  ""
+  "Is data of HTML type"
   [data]
   (when data
     (when-let [data-type-name (aget
