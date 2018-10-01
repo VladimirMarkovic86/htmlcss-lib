@@ -1,4 +1,4 @@
-# server
+# Simple HTML and CSS library
 
 Simple HTML and CSS library
 
