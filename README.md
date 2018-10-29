@@ -7,7 +7,7 @@ Simple HTML CSS library is clojurescript project that implements convesion mecha
 You can use this project as dependencie in clojure projects by listing it in project.clj
 
 ```
-[org.clojars.vladimirmarkovic/htmlcss-lib "0.1.0"]
+[org.clojars.vladimirmarkovic86/htmlcss-lib "0.1.0"]
 ```
 
 ## Authors
