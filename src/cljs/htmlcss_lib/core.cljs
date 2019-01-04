@@ -1,6 +1,6 @@
 (ns htmlcss-lib.core)
 
-(defn- crt
+(defn crt
   "Create clojure map that represents HTML element
    
    el String that represents HTML element
@@ -623,6 +623,102 @@
        events
        dynamic-attrs))
 
+(defn header
+  "Shortcut for clojure map representation of header tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "header"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn footer
+  "Shortcut for clojure map representation of footer tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "footer"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn article
+  "Shortcut for clojure map representation of article tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "article"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn aside
+  "Shortcut for clojure map representation of aside tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "aside"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn section
+  "Shortcut for clojure map representation of section tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "section"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn fieldset
+  "Shortcut for clojure map representation of fieldset tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "fieldset"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn legend
+  "Shortcut for clojure map representation of legend tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "legend"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn form
+  "Shortcut for clojure map representation of form tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "form"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
 ;(defn css
 ; ""
 ; [selector
@@ -649,136 +745,187 @@
   "Is data of HTML type"
   [data]
   (when data
-    (when-let [data-type-name (aget
-                                (type data)
-                                "name")]
+    (when-let [data-type-name (.-name
+                                (type
+                                  data))]
       (> (.indexOf
            data-type-name
            "HTML")
          -1))
    ))
 
-(defn- generate-html
+(defn generate-html
   "Generates HTML element out of clojure map created by crt fn"
   [data]
-  (let [result (atom nil)]
-    (when (map? data)
-      (let [el (:el data)
-            cont (:cont data)
-            new-element (.createElement
-                          js/document
-                          el)
-            attrs (:attrs data)
-            events (:events data)
-            dynamic-attrs (:dynamic-attrs data)]
-       (doseq [[attr-name
-                attr-value] attrs]
-        (let [attr-cont (atom "")]
-          (if (and (= attr-name
-                      :style)
-                   (map? attr-value))
-            (doseq [[prop-name
-                     prop-value] attr-value]
-             (swap! attr-cont str (name prop-name)
-                                  ": "
-                                  prop-value
-                                  "; "))
-            (swap! attr-cont str attr-value))
-          (.setAttribute new-element (name attr-name)
-                                     @attr-cont))
-        )       
-       (doseq [[evt-name
-                evt-conf] events]
-         (when (map? evt-conf)
-           (let [{evt-fn :evt-fn
-                  evt-p :evt-p} evt-conf]
-             (aset
-               new-element
-               (name evt-name)
-               ((fn []
-                  (fn [event]
-                    (evt-fn
-                      evt-p
-                      new-element
-                      event))
+  (try
+    (let [result (atom nil)]
+      (when (map?
+              data)
+        (let [el (:el data)
+              cont (:cont data)
+              new-element (.createElement
+                            js/document
+                            el)
+              attrs (:attrs data)
+              events (:events data)
+              dynamic-attrs (:dynamic-attrs data)]
+          (doseq [[attr-name
+                   attr-value] attrs]
+            (let [attr-cont (atom "")]
+              (if (and (= attr-name
+                          :style)
+                       (map?
+                         attr-value))
+                (doseq [[prop-name
+                         prop-value] attr-value]
+                  (swap!
+                    attr-cont
+                    str
+                    (name
+                      prop-name)
+                    ": "
+                    prop-value
+                    "; "))
+                (swap!
+                  attr-cont
+                  str
+                  attr-value))
+              (.setAttribute
+                new-element
+                (name
+                  attr-name)
+                @attr-cont))
+           )
+          (doseq [[evt-name
+                   evt-conf] events]
+            (when (map?
+                    evt-conf)
+              (let [{evt-fn :evt-fn
+                     evt-p :evt-p} evt-conf]
+                (aset
+                  new-element
+                  (name
+                    evt-name)
+                  ((fn []
+                     (fn [event]
+                       (evt-fn
+                         evt-p
+                         new-element
+                         event))
+                    ))
                  ))
-              ))
-          )
-         (when (vector? evt-conf)
-           (doseq [{evt-fn :evt-fn
-                    evt-p :evt-p} evt-conf]
-             (let [attached-evts (aget
-                                   new-element
-                                   (name evt-name))
-                   
-                   ]
-               (.addEventListener
-                 new-element
-                 (.replace
-                   (name evt-name)
-                   "on"
-                   "")
-                 ((fn []
-                    (fn [event]
-                      (evt-fn
-                        evt-p
-                        new-element
-                        event))
+             )
+            (when (vector?
+                    evt-conf)
+              (doseq [{evt-fn :evt-fn
+                       evt-p :evt-p} evt-conf]
+                (let [attached-evts (aget
+                                      new-element
+                                      (name
+                                        evt-name))]
+                  (.addEventListener
+                    new-element
+                    (.replace
+                      (name
+                        evt-name)
+                      "on"
+                      "")
+                    ((fn []
+                       (fn [event]
+                         (evt-fn
+                           evt-p
+                           new-element
+                           event))
+                      ))
                    ))
-                ))
-            ))
-        )
-       (doseq [[dyn-attr-name
-                dyn-attr-value] dynamic-attrs]
-         (aset
-           new-element
-           (name dyn-attr-name)
-           dyn-attr-value))
-       (when (or (string? cont)
-                 (number? cont))
-         (aset new-element "innerHTML" cont))
-       (when (vector? cont)
-         (doseq [cont-element cont]
-           (when-let [generated-elem (generate-html
-                                       cont-element)]
-             (.appendChild
-               new-element
-               generated-elem))
-          ))
-       (when (map? cont)
-         (when-let [generated-elem (generate-html
-                                     cont)]
-           (.appendChild
-             new-element
-             generated-elem))
-        )
-       (when (html? cont)
-         (.appendChild
-           new-element
-           cont))
-       (reset!
-         result
-         new-element))
-     )
-    (when (vector? data)
-      (let [generated-htmls (atom [])]
-        (doseq [data-element data]
-          (when-let [generated-elem (generate-html
-                                      data-element)]
-            (swap!
-              generated-htmls
-              conj
-              generated-elem))
-         )
+               ))
+           )
+          (doseq [[dyn-attr-name
+                   dyn-attr-value] dynamic-attrs]
+            (aset
+              new-element
+              (name
+                dyn-attr-name)
+              dyn-attr-value))
+          (when (or (string?
+                      cont)
+                    (number?
+                      cont))
+            (aset
+              new-element
+              "innerHTML"
+              cont))
+          (when (vector?
+                  cont)
+            (doseq [cont-element cont]
+              (if (or (string?
+                        cont-element)
+                      (number?
+                        cont-element))
+                (.append
+                  new-element
+                  cont-element)
+                (when-let [generated-elem (generate-html
+                                            cont-element)]
+                  (when (html?
+                          generated-elem)
+                    (.appendChild
+                      new-element
+                      generated-elem))
+                  (when (vector?
+                          generated-elem)
+                    (doseq [gen-elem generated-elem]
+                      (.appendChild
+                        new-element
+                        gen-elem))
+                   ))
+               ))
+           )
+          (when (map?
+                  cont)
+            (when-let [generated-elem (generate-html
+                                        cont)]
+              (.appendChild
+                new-element
+                generated-elem))
+           )
+          (when (html?
+                  cont)
+            (.appendChild
+              new-element
+              cont))
+          (reset!
+            result
+            new-element))
+       )
+      (when (vector?
+              data)
+        (let [generated-htmls (atom [])]
+          (doseq [data-element data]
+            (when-let [generated-elem (generate-html
+                                        data-element)]
+              (swap!
+                generated-htmls
+                conj
+                generated-elem))
+           )
+          (reset!
+            result
+            @generated-htmls))
+       )
+      (when (html?
+              data)
         (reset!
           result
-          @generated-htmls))
-     )
-    (when (html? data)
-      (reset!
-        result
-        data))
-    @result))
+          data))
+      @result)
+    (catch js/Error e
+      (.log
+        js/console
+        (.-message
+          e))
+     ))
+ )
 
 (defn anmtn
   "Generate map that represents animation in css style
@@ -817,9 +964,10 @@
    & cont]
   {:attrs {:id id
            :type "text/css"}
-   :cont (vec cont)})
+   :cont (vec
+           cont)})
 
-(defn- form-style-content
+(defn form-style-content
   "Generate string that represents selector or animation of style HTML element"
   [data]
   (let [sel (:sel data)
@@ -829,63 +977,117 @@
         to-props (:to data)
         content (atom "")]
     (when sel
-      (swap! content str sel
-                         " { ")
+      (swap!
+        content
+        str
+        sel
+        " { ")
       (doseq [[prop-name
                prop-value] props]
-        (swap! content str (name prop-name)
-                           ": "
-                           prop-value
-                           "; "))
+        (swap!
+          content
+          str
+          (name
+            prop-name)
+          ": "
+          prop-value
+          "; "))
      )
     (when anim
-      (swap! content str anim
-                         " { "
-                         "from { ")
+      (swap!
+        content
+        str
+        anim
+        " { "
+        "from { ")
       (doseq [[prop-name
                prop-value] from-props]
-        (swap! content str (name prop-name)
-                           ": "
-                           prop-value
-                           "; "))
-      (swap! content str "} ")
-      (swap! content str "to { ")
+        (swap!
+          content
+          str
+          (name
+            prop-name)
+          ": "
+          prop-value
+          "; "))
+      (swap!
+        content
+        str
+        "} ")
+      (swap!
+        content
+        str
+        "to { ")
       (doseq [[prop-name
                prop-value] to-props]
-        (swap! content str (name prop-name)
-                           ": "
-                           prop-value
-                           "; "))
-      (swap! content str "} "))
-    (swap! content str "} ")
+        (swap!
+          content
+          str
+          (name
+            prop-name)
+          ": "
+          prop-value
+          "; "))
+      (swap!
+        content
+        str
+        "} "))
+    (swap!
+      content
+      str
+      "} ")
     @content))
 
-(defn- generate-style
+(defn generate-style
   "Generates style HTML element from clojure map generated by stl fn"
   [data]
-  (when (map? data)
+  (when (map?
+          data)
     (let [new-element (.createElement
                         js/document
                         "style")
           attrs (:attrs data)
           cont (:cont data)]
-      (if (string? cont)
-        (aset new-element "innerHTML" cont)
-        (if (vector? cont)
+      (if (string?
+            cont)
+        (aset
+          new-element
+          "innerHTML"
+          cont)
+        (if (vector?
+              cont)
           (doseq [cont-element cont]
-            (aset new-element "innerHTML" (str (aget new-element "innerHTML")
-                                               " "
-                                               (form-style-content cont-element))
+            (aset
+              new-element
+              "innerHTML"
+              (str
+                (.-innerHTML
+                  new-element)
+                " "
+                (form-style-content
+                  cont-element))
              ))
-          (if (map? cont)
-            (aset new-element "innerHTML" (form-style-content cont))
-            (aset new-element "innerHTML" (form-style-content data))
+          (if (map?
+                cont)
+            (aset
+              new-element
+              "innerHTML"
+              (form-style-content
+                cont))
+            (aset
+              new-element
+              "innerHTML"
+              (form-style-content
+                data))
            ))
        )
       (doseq [[attr-name
                attr-value] attrs]
-        (.setAttribute new-element (name attr-name)
-                                   attr-value))
+        (.setAttribute
+          new-element
+          (name
+            attr-name)
+          attr-value))
       new-element))
  )
 
