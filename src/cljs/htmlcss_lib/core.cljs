@@ -719,6 +719,18 @@
        events
        dynamic-attrs))
 
+(defn audio
+  "Shortcut for clojure map representation of audio tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "audio"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
 ;(defn css
 ; ""
 ; [selector
