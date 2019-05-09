@@ -1,6 +1,6 @@
 # Simple HTML CSS library
 
-Simple HTML CSS library is clojurescript project that implements convesion mechanism of clojure maps into HTML elements using .createElement Javascript function on document object.
+Simple HTML CSS library is clojurescript project that implements conversion mechanism of clojure maps into HTML elements using .createElement Javascript function on document object.
 
 ### Installing
 

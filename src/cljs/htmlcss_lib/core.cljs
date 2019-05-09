@@ -731,6 +731,150 @@
        events
        dynamic-attrs))
 
+(defn svg
+  "Shortcut for clojure map representation of svg tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "svg"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn circle
+  "Shortcut for clojure map representation of circle tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "circle"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn rect
+  "Shortcut for clojure map representation of rect tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "rect"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn ellipse
+  "Shortcut for clojure map representation of ellipse tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "ellipse"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn line
+  "Shortcut for clojure map representation of line tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "line"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn polygon
+  "Shortcut for clojure map representation of polygon tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "polygon"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn polyline
+  "Shortcut for clojure map representation of polyline tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "polyline"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn path
+  "Shortcut for clojure map representation of path tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "path"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn text
+  "Shortcut for clojure map representation of text tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "text"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn tspan
+  "Shortcut for clojure map representation of tspan tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "tspan"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn clip-path
+  "Shortcut for clojure map representation of clipPath tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "clipPath"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
+(defn svg-use
+  "Shortcut for clojure map representation of use tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "use"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
 ;(defn css
 ; ""
 ; [selector
@@ -760,11 +904,34 @@
     (when-let [data-type-name (.-name
                                 (type
                                   data))]
-      (> (.indexOf
-           data-type-name
-           "HTML")
-         -1))
-   ))
+      (or (> (.indexOf
+               data-type-name
+               "HTML")
+             -1)
+          (> (.indexOf
+               data-type-name
+               "SVG")
+             -1))
+     ))
+ )
+
+(defn is-svg-element?
+  "Is element of SVG type"
+  [element-name]
+  (contains?
+    #{"svg"
+      "circle"
+      "rect"
+      "ellipse"
+      "line"
+      "polygon"
+      "polyline"
+      "path"
+      "text"
+      "tspan"
+      "clipPath"
+      "use"}
+    element-name))
 
 (defn generate-html
   "Generates HTML element out of clojure map created by crt fn"
@@ -775,9 +942,15 @@
               data)
         (let [el (:el data)
               cont (:cont data)
-              new-element (.createElement
-                            js/document
-                            el)
+              new-element (if (is-svg-element?
+                                el)
+                            (.createElementNS
+                              js/document
+                              "http://www.w3.org/2000/svg"
+                              el)
+                            (.createElement
+                              js/document
+                              el))
               attrs (:attrs data)
               events (:events data)
               dynamic-attrs (:dynamic-attrs data)]
