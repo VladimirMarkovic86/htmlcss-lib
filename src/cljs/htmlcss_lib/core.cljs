@@ -875,6 +875,18 @@
        events
        dynamic-attrs))
 
+(defn canvas
+  "Shortcut for clojure map representation of canvas tag"
+  [& [cont
+      attrs
+      events
+      dynamic-attrs]]
+  (crt "canvas"
+       cont
+       attrs
+       events
+       dynamic-attrs))
+
 ;(defn css
 ; ""
 ; [selector
