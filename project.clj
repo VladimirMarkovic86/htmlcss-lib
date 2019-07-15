@@ -1,4 +1,4 @@
-(defproject org.clojars.vladimirmarkovic86/htmlcss-lib "0.1.6"
+(defproject org.clojars.vladimirmarkovic86/htmlcss-lib "0.1.7"
   :description "Simple HTML and CSS library"
   :url "http://github.com/VladimirMarkovic86/htmlcss-lib"
   :license {:name "Eclipse Public License"
@@ -9,6 +9,8 @@
   :min-lein-version "2.0.0"
   
   :source-paths ["src/cljs"]
+  
+  :jar-exclusions [#"^public/"]
 
   :plugins [[lein-cljsbuild  "1.1.7"]
             [lein-doo "0.1.11"]
